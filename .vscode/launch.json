@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ts-node current file",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "ts-node"],
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "watch current file",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "-y",
+        "nodemon",
+        "-q",
+        "--exec",
+        "npx",
+        "-y",
+        "ts-node"
+      ],
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "restart": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+  ]
+}
+
