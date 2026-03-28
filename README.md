@@ -12,7 +12,7 @@ These are the same arguments made for the transition from python2 -> python3, a 
 
 I've discussed this in more detail in a series of comments starting with: https://gist.github.com/joepie91/bca2fda868c1e8b2c2caf76af7dfcad3?permalink_comment_id=4657938#gistcomment-4657938
 
-Sindre Sorhus is [one of the most prolific authors of npm packages](https://www.npmjs.com/~sindresorhus). He has made a deliberate attempt to shift the ecosystem by converting all of his active projects to be ESM only. This has led to many incompatibility problems (their solutions outlined in an [increasingly lengthy FAQ](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c?permalink_comment_id=3992076#gistcomment-3992076) about resolving these issues). It's definitely his prerogative, and I'm not intending to attack or insult him. However, I think it was misguided, particularly for libraries intended for exclusive use with nodejs. As a result, many people are still using older versions from before the ESM cutover. But, I don't want to base my ideas on opinion, nor do I expect random-dude-on-Internet to care about my opinion, so I wanted to gather objective metrics of how it's going. So I created a small script to find out the numbers...
+Sindre Sorhus is [one of the most prolific authors of npm packages](https://www.npmjs.com/~sindresorhus). He has made a deliberate attempt to shift the ecosystem by converting all of his active projects to be ESM-only. This has led to many incompatibility problems (their solutions outlined in an [increasingly lengthy FAQ](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c?permalink_comment_id=3992076#gistcomment-3992076) about resolving these issues). It's definitely his prerogative, and I'm not intending to attack or insult him. However, I think it was misguided, particularly for libraries intended for exclusive use with nodejs. As a result, many people are still using older versions from before the ESM cutover. But, I don't want to base my ideas on opinion, nor do I expect random-dude-on-Internet to care about my opinion, so I wanted to gather objective metrics of how it's going. So I created a small script to find out the numbers...
 
 ## Behavior
 
@@ -42,10 +42,14 @@ As of Apr 6, 2024, we're heading backwards:
 * total downloads of CJS versions: 13,050,481,002
 * percentage of downloads that are ESM versions: 4.78%
 
-As of Mar 28, 2026, we have a record (percentage... and also a retraction of a lot of versions)
+As of Mar 28, 2026, we have a record... percentage... but the downloads are tanking. The experiment is over.
 * number of packages: 845
 * total number of versions: 7,738
 * total downloads: 6,358,227,057
 * total downloads of ESM versions: 605,380,307
 * total downloads of CJS versions: 5,752,846,750
 * percentage of downloads that are ESM versions: 9.52%
+
+I really didn't want him to fail. He was the poster child for "you can make it doing open source!"
+
+But this holy war was career suicide. It's now worse than Python. Give up already.
