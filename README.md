@@ -41,3 +41,11 @@ As of Apr 6, 2024, we're heading backwards:
 * total downloads of ESM versions: 654,849,866
 * total downloads of CJS versions: 13,050,481,002
 * percentage of downloads that are ESM versions: 4.78%
+
+As of Mar 28, 2026, we have a record (percentage... and also a retraction of a lot of versions)
+* number of packages: 845
+* total number of versions: 7,738
+* total downloads: 6,358,227,057
+* total downloads of ESM versions: 605,380,307
+* total downloads of CJS versions: 5,752,846,750
+* percentage of downloads that are ESM versions: 9.52%
