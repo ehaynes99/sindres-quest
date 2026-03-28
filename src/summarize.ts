@@ -37,14 +37,18 @@ export const summarize = async (authorName: string): Promise<Summary> => {
   await concurrent(10, async () => {
     while (remaining.length) {
       const packageName = remaining.pop()!
-      const packageSummary = await createSummary(packageName)
-      if (packageSummary.downloads > 0) {
-        totalDownloads += packageSummary.downloads
-        totalVersions += packageSummary.numVersions
-        totalEsm += packageSummary.esm
-        totalCjs += packageSummary.cjs
+      try {
+        const packageSummary = await createSummary(packageName)
+        if (packageSummary.downloads > 0) {
+          totalDownloads += packageSummary.downloads
+          totalVersions += packageSummary.numVersions
+          totalEsm += packageSummary.esm
+          totalCjs += packageSummary.cjs
 
-        packageSummaries.push(packageSummary)
+          packageSummaries.push(packageSummary)
+        }
+      } catch (error) {
+        console.error(`error summarizing ${packageName}`, error)
       }
       console.log(`${packageName} (${++count}/${packages.length})`)
     }
